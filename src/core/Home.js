@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Layout from "./Layout";
-import { getProducts } from "./apiCore";
-import Card from "./Card";
-import Search from "./Search";
+import React, { useState, useEffect } from 'react';
+import Layout from './Layout';
+import { getProducts } from './apiCore';
+import Card from './Card';
+import Search from './Search';
 
 const Home = () => {
     const [productsBySell, setProductsBySell] = useState([]);
@@ -10,7 +10,7 @@ const Home = () => {
     const [error, setError] = useState(false);
 
     const loadProductsBySell = () => {
-        getProducts("sold").then(data => {
+        getProducts('sold').then(data => {
             if (data.error) {
                 setError(data.error);
             } else {
@@ -20,7 +20,7 @@ const Home = () => {
     };
 
     const loadProductsByArrival = () => {
-        getProducts("createdAt").then(data => {
+        getProducts('createdAt').then(data => {
             if (data.error) {
                 setError(data.error);
             } else {
@@ -36,7 +36,7 @@ const Home = () => {
 
     return (
         <Layout
-            title="Home Page"
+            title="FullStack React Node MongoDB Ecommerce App"
             description="Node React E-commerce App"
             className="container-fluid"
         >
